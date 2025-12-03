@@ -10,22 +10,22 @@ import Image from 'next/image';
 
 export default function Home() {
   const trainingModules = [
-    { id: 1, title: 'Boiler Systems', image: '/training/boiler.jpg', link: '/training/boiler' },
-    { id: 2, title: 'Chiller Systems', image: '/training/chiller.jpg', link: '/training/chiller' },
-    { id: 3, title: 'Cooling Tower Systems', image: '/training/cooling-tower.jpg', link: '/training/cooling-tower' },
-    { id: 4, title: 'Air Handling Units', image: '/training/ahu.jpg', link: '/training/ahu' },
-    { id: 5, title: 'HVAC Fundamentals', image: '/training/hvac-fundamentals.jpg', link: '/training/hvac-fundamentals' },
-    { id: 6, title: 'Energy Efficiency', image: '/training/energy-efficiency.jpg', link: '/training/energy-efficiency' },
-    { id: 7, title: 'Building Controls', image: '/training/controls.jpg', link: '/training/controls' },
-    { id: 8, title: 'Hot Water Systems', image: '/training/hot-water.jpg', link: '/training/hot-water' },
-    { id: 9, title: 'System Integration', image: '/training/integration.jpg', link: '/training/integration' },
+    { id: 1, title: 'Module 1 - Heating - Steam', image: '/Module1.webp', link: '/training/module-1' },
+    { id: 2, title: 'Module 2 - Heating - Water', image: '/Module2.webp', link: '/training/module-2' },
+    { id: 3, title: 'Module 3 - Heating - Air', image: '/Module3.webp', link: '/training/module-3' },
+    { id: 4, title: 'Module 4 - Cooling Water Side', image: '/Module4.webp', link: '/training/module-4' },
+    { id: 5, title: 'Module 5 - Cooling Air Side', image: '/Module5.webp', link: '/training/module-5' },
+    { id: 6, title: 'Module 6 - BMS.EMS Controls', image: '/Module6.webp', link: '/training/module-6' },
+    { id: 7, title: 'Module 7 - DHW Heating', image: '/Module7.webp', link: '/training/module-7' },
+    { id: 8, title: 'Module 8 - Heating & Cooling Air Side', image: '/Module8.webp', link: '/training/module-8' },
+    { id: 9, title: 'Case Studies Cx, EE, MEP', image: '/CaseStudies.webp', link: '/training/case-studies' },
   ];
 
   const partners = [
-    { name: 'Energy Star', logo: '/partners/energy-star.png' },
-    { name: 'AEE', logo: '/partners/aee.png' },
-    { name: 'National Grid', logo: '/partners/national-grid.png' },
-    { name: 'Con Edison', logo: '/partners/con-edison.png' },
+    { name: 'Energy Star', logo: '/Image3.webp' },
+    { name: 'AEE', logo: '/Image3.webp' },
+    { name: 'National Grid', logo: '/Image4.webp' },
+    { name: 'Con Edison', logo: '/Image4.webp' },
   ];
 
   const benefits = [
@@ -147,10 +147,13 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="relative aspect-square overflow-hidden rounded-2xl bg-zinc-100 shadow-2xl">
-                {/* Placeholder for hero image */}
-                <div className="flex h-full items-center justify-center bg-linear-to-br from-blue-100 to-cyan-100">
-                  <Building2 className="h-32 w-32 text-blue-600/30" />
-                </div>
+                <Image
+                  src="/Image1.webp"
+                  alt="Training facility"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </motion.div>
           </div>
@@ -179,10 +182,12 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <div className="relative aspect-video overflow-hidden rounded-xl bg-zinc-100 shadow-lg">
-                {/* Placeholder for about image */}
-                <div className="flex h-full items-center justify-center bg-linear-to-br from-zinc-100 to-zinc-200">
-                  <Building2 className="h-24 w-24 text-zinc-400" />
-                </div>
+                <Image
+                  src="/Image2.webp"
+                  alt="About Yadav Training Solutions"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </motion.div>
 
@@ -325,10 +330,12 @@ export default function Home() {
                 whileHover={{ y: -8 }}
               >
                 <div className="relative aspect-4/3 overflow-hidden bg-zinc-100">
-                  {/* Placeholder - will be replaced with actual images */}
-                  <div className="flex h-full items-center justify-center bg-linear-to-br from-blue-100 to-cyan-100">
-                    <GraduationCap className="h-16 w-16 text-blue-600/40" />
-                  </div>
+                  <Image
+                    src={module.image}
+                    alt={module.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-black/0 transition-all group-hover:bg-black/10" />
                 </div>
                 <div className="p-6">
@@ -373,9 +380,13 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
               >
-                {/* Placeholder for partner logos */}
-                <div className="flex h-20 w-full items-center justify-center text-sm font-semibold text-zinc-400">
-                  {partner.name}
+                <div className="relative h-20 w-full">
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </motion.div>
             ))}
