@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { 
   GraduationCap, Award, Users, Building2, Phone, Mail, 
   MapPin, Clock, CheckCircle2, Target, Shield, TrendingUp,
-  Linkedin, Facebook, Twitter, Youtube
+  Globe, MessageCircle, Send, Play
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -646,17 +646,17 @@ export default function Home() {
                 Copyright © {new Date().getFullYear()} Yadav Training Solutions. All Rights Reserved.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="rounded-full bg-zinc-800 p-2 transition-colors hover:bg-blue-600" aria-label="LinkedIn">
-                  <Linkedin className="h-5 w-5" />
+                <a href="#" className="rounded-full bg-zinc-800 p-2 transition-colors hover:bg-blue-600" aria-label="Website">
+                  <Globe className="h-5 w-5" />
                 </a>
-                <a href="#" className="rounded-full bg-zinc-800 p-2 transition-colors hover:bg-blue-600" aria-label="Facebook">
-                  <Facebook className="h-5 w-5" />
+                <a href="#" className="rounded-full bg-zinc-800 p-2 transition-colors hover:bg-blue-600" aria-label="Chat">
+                  <MessageCircle className="h-5 w-5" />
                 </a>
-                <a href="#" className="rounded-full bg-zinc-800 p-2 transition-colors hover:bg-blue-600" aria-label="Twitter">
-                  <Twitter className="h-5 w-5" />
+                <a href="#" className="rounded-full bg-zinc-800 p-2 transition-colors hover:bg-blue-600" aria-label="Send">
+                  <Send className="h-5 w-5" />
                 </a>
-                <a href="#" className="rounded-full bg-zinc-800 p-2 transition-colors hover:bg-blue-600" aria-label="YouTube">
-                  <Youtube className="h-5 w-5" />
+                <a href="#" className="rounded-full bg-zinc-800 p-2 transition-colors hover:bg-blue-600" aria-label="Video">
+                  <Play className="h-5 w-5" />
                 </a>
               </div>
             </div>
